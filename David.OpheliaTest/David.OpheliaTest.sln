@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.Entities", "David.OpheliaTest.Entities\David.OpheliaTest.Entities.csproj", "{4252AC9A-2E60-4656-AE8F-FBEC38B8BB14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.DataAccessLayer", "David.OpheliaTest.DataAccessLayer\David.OpheliaTest.DataAccessLayer.csproj", "{84A0F7B3-2FF2-4056-9DE0-135211B7C94E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.Common", "David.OpheliaTest.Common\David.OpheliaTest.Common.csproj", "{5CB23575-43E5-4B68-94F8-84B5E142ACD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.BusinessLayer", "David.OpheliaTest.BusinessLayer\David.OpheliaTest.BusinessLayer.csproj", "{AA546EC9-FB90-4DAE-BBA4-1616B8C4E30C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.API", "David.OpheliaTest.API\David.OpheliaTest.API.csproj", "{05D92702-E790-4647-B101-7792423E943A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "David.OpheliaTest.UnitTests", "David.OpheliaTest.UnitTests\David.OpheliaTest.UnitTests.csproj", "{8B344B85-CB18-45D9-90F9-5A72D00129A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4252AC9A-2E60-4656-AE8F-FBEC38B8BB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4252AC9A-2E60-4656-AE8F-FBEC38B8BB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4252AC9A-2E60-4656-AE8F-FBEC38B8BB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4252AC9A-2E60-4656-AE8F-FBEC38B8BB14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A0F7B3-2FF2-4056-9DE0-135211B7C94E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A0F7B3-2FF2-4056-9DE0-135211B7C94E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A0F7B3-2FF2-4056-9DE0-135211B7C94E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A0F7B3-2FF2-4056-9DE0-135211B7C94E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB23575-43E5-4B68-94F8-84B5E142ACD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB23575-43E5-4B68-94F8-84B5E142ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB23575-43E5-4B68-94F8-84B5E142ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB23575-43E5-4B68-94F8-84B5E142ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA546EC9-FB90-4DAE-BBA4-1616B8C4E30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA546EC9-FB90-4DAE-BBA4-1616B8C4E30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA546EC9-FB90-4DAE-BBA4-1616B8C4E30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA546EC9-FB90-4DAE-BBA4-1616B8C4E30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D92702-E790-4647-B101-7792423E943A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D92702-E790-4647-B101-7792423E943A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D92702-E790-4647-B101-7792423E943A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D92702-E790-4647-B101-7792423E943A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B344B85-CB18-45D9-90F9-5A72D00129A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B344B85-CB18-45D9-90F9-5A72D00129A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B344B85-CB18-45D9-90F9-5A72D00129A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B344B85-CB18-45D9-90F9-5A72D00129A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A339F2D0-BC52-44B0-837E-3A2E4721BB2C}
+	EndGlobalSection
+EndGlobal

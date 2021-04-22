@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\David.OpheliaTest.Common\David.OpheliaTest.Common.csproj" />
+    <ProjectReference Include="..\David.OpheliaTest.DataAccessLayer\David.OpheliaTest.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\David.OpheliaTest.Entities\David.OpheliaTest.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
