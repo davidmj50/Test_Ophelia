@@ -47,12 +47,12 @@ namespace David.OpheliaTest.API.Controllers
             return Ok(response);
         }
         [HttpPost]
-        [ProducesResponseType(typeof(Response<Sale>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Sale), StatusCodes.Status200OK)]
         public ActionResult Post(Sale model)
         {
             Response<Sale> response = new Response<Sale>();
             response = contract.Post(model);
-            return Ok(response);
+            return Ok(response.Result);
         }
 
         [HttpDelete]

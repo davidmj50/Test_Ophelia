@@ -81,5 +81,15 @@ namespace David.OpheliaTest.API.Controllers
         {
             return Ok(this.contract.GetAllPaged(model));
         }
+
+
+        [HttpGet]
+        [Route("GetPointsUser/{idUser}")]
+        [ProducesResponseType(typeof(Wallet), StatusCodes.Status200OK)]
+        public ActionResult GetPage(int idUser)
+        {
+            Wallet wallet = this.contract.GetPointsUser(idUser);
+            return Ok(wallet.Points);
+        }
     }
 }

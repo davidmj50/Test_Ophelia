@@ -25,14 +25,14 @@ namespace David.OpheliaTest.API.Controllers
         }
         #endregion
 
-        [HttpPost]
+        [HttpGet]
         [Route("Login/{user}/{password}")]
-        [ProducesResponseType(typeof(Response<User>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
         public ActionResult Login(string user, string password)
         {
             Response<User> response = new Response<User>();
             response = contract.GetUserByCredentials(user, password);
-            return Ok(response);
+            return Ok(response.Result);
         }
         #region Crud Methods
 

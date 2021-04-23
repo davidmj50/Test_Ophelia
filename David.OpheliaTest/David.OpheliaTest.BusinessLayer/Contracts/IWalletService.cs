@@ -8,5 +8,6 @@ namespace David.OpheliaTest.BusinessLayer.Contracts
     public interface IWalletService : IService<Wallet>
     {
         Wallet GetPointsByIdUser(int id);
+        Wallet GetPointsUser(int idUser);
     }
 }

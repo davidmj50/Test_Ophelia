@@ -120,8 +120,10 @@ namespace David.OpheliaTest.BusinessLayer.Services
                                     c.Active == true, c => c.Role
                                     )
                         .FirstOrDefault();
-                response.IsSuccess = true;
-
+                if (response.Result != null)
+                {
+                    response.IsSuccess = true;
+                }
             }
             catch (Exception ex)
             {

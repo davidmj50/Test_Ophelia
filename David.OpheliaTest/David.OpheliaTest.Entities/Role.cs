@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace David.OpheliaTest.Entities
 {
@@ -15,6 +16,7 @@ namespace David.OpheliaTest.Entities
         [MaxLength(30, ErrorMessage = "El campo {0}, debe tener una longitud máxima de {1} caractéres")]
         public string Name { get; set; }
         #region Virtuals
+        [JsonIgnore]
         public virtual ICollection<User> Users { get; set; }
         public DateTime LastUpdate { get; set; }
         public bool Active { get; set; }

@@ -17,16 +17,21 @@ namespace David.OpheliaTest.BusinessLayer.Services
         private readonly ISaleService saleContract;
         private readonly IProductService productContract;
         private readonly IWalletService walletContract;
+        private readonly IUserService userContract;
         #endregion
 
         #region Constructor
         public SaleDetailService(ISaleDetailRepository contract, 
-            ISaleService saleContract, IProductService productContract, IWalletService walletContract)
+            ISaleService saleContract, 
+            IProductService productContract, 
+            IWalletService walletContract,
+            IUserService userContract)
         {
             this.contract = contract;
             this.saleContract = saleContract;
             this.productContract = productContract;
             this.walletContract = walletContract;
+            this.userContract = userContract;
         }
         #endregion
 
@@ -117,13 +122,14 @@ namespace David.OpheliaTest.BusinessLayer.Services
                     this.Post(saleDetail);
                 }
                 Sale sale = saleDetails[0].Sale;
-                User user = sale.User;
+                User user = this.userContract.Get(sale.UserId);
                 int wholeAmount = 0;
                 foreach (var item in saleDetails)
                 {
                     wholeAmount += (int)item.TotalSale;
                     Product product = item.Product;
                     int stock = product.Stock - item.Amount;
+                    product.SaleDetails = null;
                     product.Stock = stock;
                     this.productContract.Put(product);
                 }
@@ -132,7 +138,7 @@ namespace David.OpheliaTest.BusinessLayer.Services
                 walletContract.Put(wallet);
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }

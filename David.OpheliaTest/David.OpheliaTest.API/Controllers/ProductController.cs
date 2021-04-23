@@ -38,13 +38,14 @@ namespace David.OpheliaTest.API.Controllers
             return Ok(Products);
         }
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(Response<List<Product>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Product), StatusCodes.Status200OK)]
         public ActionResult Get(int id)
         {
             Response<Product> response = new Response<Product>();
             Product Products = contract.Get(id);
             response.Result = Products;
-            return Ok(response);
+            response.IsSuccess = true;
+            return Ok(response.Result);
         }
         [HttpPost]
         [ProducesResponseType(typeof(Response<Product>), StatusCodes.Status200OK)]
@@ -80,6 +81,24 @@ namespace David.OpheliaTest.API.Controllers
         public ActionResult GetPage(PaginatorRequest model)
         {
             return Ok(this.contract.GetAllPaged(model));
+        }
+
+        [HttpGet]
+        [Route("productsByCategory/{id}")]
+        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
+        public ActionResult ProductsByCategory(int id)
+        {
+            List<Product> response = this.contract.GetProductsByCategory(id);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Route("searchProduct/{keywords}")]
+        [ProducesResponseType(typeof(List<Product>), StatusCodes.Status200OK)]
+        public ActionResult SearchProducts(string keywords)
+        {
+            List<Product> response = this.contract.SearchProducts(keywords);
+            return Ok(response);
         }
     }
 }

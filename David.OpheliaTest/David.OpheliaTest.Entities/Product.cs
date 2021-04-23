@@ -33,7 +33,7 @@ namespace David.OpheliaTest.Entities
 
         #region Virtuals
         [Required]
-        public virtual int categoryId { get; set; }
+        public int CategoryId { get; set; }
         [JsonProperty("Category")]
         public virtual Category Category { get; set; }
 

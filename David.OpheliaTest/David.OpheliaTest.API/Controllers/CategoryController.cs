@@ -1,6 +1,7 @@
 ﻿using David.OpheliaTest.BusinessLayer.Contracts;
 using David.OpheliaTest.Common.Models;
 using David.OpheliaTest.Entities;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ namespace David.OpheliaTest.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[EnableCors("localTests")]
     public class CategoryController : ControllerBase
     {
         #region Properties
@@ -28,8 +30,9 @@ namespace David.OpheliaTest.API.Controllers
         #region Crud Methods
 
         [HttpGet]
+        //[Route("categories")]
 
-        [ProducesResponseType(typeof(Response<List<Category>>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(List<Category>), StatusCodes.Status200OK)]
         public ActionResult Get()
         {
             Response<List<Category>> response = new Response<List<Category>>();

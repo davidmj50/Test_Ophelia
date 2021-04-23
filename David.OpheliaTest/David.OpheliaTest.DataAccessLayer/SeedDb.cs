@@ -22,6 +22,28 @@ namespace David.OpheliaTest.DataAccessLayer
             await this.CheckRoles();
             await this.CheckUsers();
             await this.CheckProducts();
+            await this.CheckWallets();
+        }
+
+        private async Task CheckWallets()
+        {
+            if (!this.context.Wallets.Any())
+            {
+                this.AddWallet(1, 1000);
+                this.AddWallet(2, 1000);
+                await this.context.SaveChangesAsync();
+            }
+        }
+
+        private void AddWallet(int idUser, int points)
+        {
+            this.context.Wallets.Add(new Entities.Wallet
+            {
+                Active = true,
+                LastUpdate = DateTime.Now,
+                Points = points,
+                UserId = idUser
+            });
         }
 
         private async Task CheckProducts()
@@ -50,7 +72,7 @@ namespace David.OpheliaTest.DataAccessLayer
             this.context.Products.Add(new Entities.Product
             {
                 Active = true,
-                categoryId = category,
+                CategoryId = category,
                 Description = description,
                 Image = img,
                 Price = price,

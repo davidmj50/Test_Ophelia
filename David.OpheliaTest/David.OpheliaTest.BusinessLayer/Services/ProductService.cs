@@ -100,6 +100,16 @@ namespace David.OpheliaTest.BusinessLayer.Services
             }
             return contract.Update(entity);
         }
+
+        public List<Product> GetProductsByCategory(int idCategory)
+        {
+            return this.contract.GetProductsByCategory(idCategory);
+        }
+
+        public List<Product> SearchProducts(string keywords)
+        {
+            return this.contract.SearchProducts(keywords);
+        }
         #endregion
     }
 }

@@ -7,5 +7,7 @@ namespace David.OpheliaTest.DataAccessLayer.Contracts
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
+        List<Product> GetProductsByCategory(int idCategory);
+        List<Product> SearchProducts(string keywords);
     }
 }

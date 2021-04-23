@@ -87,7 +87,7 @@ namespace David.OpheliaTest.API.Controllers
         }
 
         [HttpPost]
-        [Route("GetPage")]
+        [Route("SaveAllSalesDetail")]
         [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
         public ActionResult SaveAllSalesDetail(List<SaleDetail> saleDetails)
         {

@@ -7,5 +7,7 @@ namespace David.OpheliaTest.BusinessLayer.Contracts
 {
     public interface IProductService : IService<Product>
     {
+        List<Product> GetProductsByCategory(int idCategory);
+        List<Product> SearchProducts(string keywords);
     }
 }

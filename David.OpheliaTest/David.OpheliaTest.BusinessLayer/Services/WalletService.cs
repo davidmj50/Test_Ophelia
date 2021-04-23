@@ -105,6 +105,12 @@ namespace David.OpheliaTest.BusinessLayer.Services
         {
             return contract.GetPointsByIdUser(idUser);
         }
+
+        public Wallet GetPointsUser(int idUser)
+        {
+            return this.contract.GetAllMatchedIncluding(c => c.UserId == idUser &&
+                                    c.Active == true, c => c.User).FirstOrDefault();
+        }
         #endregion
     }
 }
